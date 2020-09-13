@@ -90,13 +90,23 @@ powerButton()
 
 //a vending machine is an object
 
-//it has an array of snacks (make 3 snacks)
-
-//snacks are objects that have a name and a price
-
-//a vending machine has a function vend that allows user to enter the array position (a number) of the snack and then that snack will be returned
+const vendingMachine = {
+    //it has an array of snacks (make 3 snacks)
+    snacks: [
+        //snacks are objects that have a name and a price
+        {name:'Butterfinger', price: 2},
+        {name: 'Nestle Crunch', price: 1},
+        {name: 'Kit-Kat', price: 2}
+    ],
+    //a vending machine has a function vend that allows user to enter the array position (a number) of the snack and then that snack will be returned
+    vend: (num) => {
+        return vendingMachine.snacks[num].name
+    }
+}
 
 //Be able to call vendingMachine.vend() with a valid integer to return a snack
+
+vendingMachine.vend(2)
 
 //git commit
 
