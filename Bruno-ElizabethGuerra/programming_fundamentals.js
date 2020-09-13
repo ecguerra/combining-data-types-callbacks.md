@@ -7,24 +7,24 @@ const f = l => {
     let es = 0, p = 0, c = 1, n = 0
 //starting a while loop. it runs as long as c is less than or equal to l
     while (c <= l) {
-//n now equals the value of c plus p
+//n now equals the value of c plus p // semi-colon is necessary here
       n = c + p;
 //I do not know what this means // I ran it and it returned [89,89] // c is 89, p is 55, n is 89
-// it's connected to n = c + p;
+// UPDATE: I know now. It's shorthand for c=n, p=c. I guess doing it in one argument means that p assumes the current value of c, not the new n value
       [c, p] = [n, c]
-      console.log(`c = ${c}, p = ${p}, n=${n}`)
+//      console.log(`c = ${c}, p = ${p}, n=${n}`)
 // if c mod 2 remainder is 0, es adds the value of c to itself. if it is not true, add 0
       es += (c % 2 === 0) ? c : 0
-      console.log(`es=${es}`)
+//      console.log(`es=${es}`)
     }
 // This returns the value of es when the function is run 
     return es
   }
 // this tells tells the console to print the result of the function with 55 as the argument. l = 55
 // in this instance, it returns the value of es, which is 44
-  console.log(f(55))
+  console.log(f(57))
 
-// c values go (2,3,5,8,21,34,55,89) // es value does track with only adding the evens
+// c values go (2,3,5,8,13,21,34,55,89) // es value does track with only adding the evens
 // n and c are always equal // p starts at 1, and then follows c // makes sense, because it starts off with n equalling c + p, and c starts at 1 while n and p start at 0 // I understand where the values of es and n come from, but I don't know why c and p increase as well every time // Maybe it's something like p = c, c = n? 
 
 //OMG it's the friggen Fibonacci sequence again // I feel like I'm in the Da Vinci Code // pun intended
