@@ -1,3 +1,5 @@
+//Section 2: Combining Datatypes
+
 //Combine objects, arrays, and functions
 
 /*1. Create an object, called crayonBox, that has a property that is an array. The array should have the names of some crayons. Log one of the elements of that array.*/
@@ -132,9 +134,9 @@ console.log(divide(21,3))
 
 //Make a function calculate that takes three arguments. Assume the two arguments are a number ie num1, num2 and a function called operates (a callback).
 
-const calculate = (func,x,y) => {
+const calculate = (operates,x,y) => {
 //Make it so that when calculate is invoked, the callback "operates" on the numbers and returns the value.
-    return func(x,y)
+    return operates(x,y)
 }
 
 //Call calculate 4 times, each time using one of the operation functions you wrote

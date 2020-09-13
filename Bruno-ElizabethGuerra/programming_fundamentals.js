@@ -1,3 +1,5 @@
+//Section 1: Programming Fundamentals
+
 //Commenting Code
 /* Comment each line of this code and describe what it is doing. Feel free to run this code and add console.logs to help you figure it out: */
 
