@@ -47,7 +47,6 @@ console.log(apartmentBuilding[1][2])
 
 
 
-
 //Combine objects, arrays, and functions more than one level deep
 
 /*1. Create a function knit that returns an object that has the following kinds of properties item: scarf, size : 6ft etc. Log a value of that object (hint: call the function and then call a property on the return value).*/
@@ -57,7 +56,6 @@ console.log(apartmentBuilding[1][2])
 /* 3.Create a function powerButton that returns a function called options - options should console.log a simple message like select a song. Call that inner function */
 
 //git commit
-
 
 
 
@@ -74,3 +72,64 @@ console.log(apartmentBuilding[1][2])
 //Be able to call vendingMachine.vend() with a valid integer to return a snack
 
 //git commit
+
+
+
+//Callbacks
+
+//Make a function add that takes two arguments (numbers) and sums them together
+const add = (x,y) => {return x + y}
+console.log(add(3,7))
+
+//Make a function subtract that takes two arguments (numbers) and subtracts them
+const subtract = (x,y) => {return x - y}
+console.log(subtract(9,6))
+
+//Make a function multiply that takes two arguments and multiplies them
+const multiply = (x,y) => {return x*y}
+console.log(multiply(9,6))
+
+//Make a function divide that takes two arguments and divides them
+const divide = (x,y) => {return x/y}
+console.log(divide(21,3))
+
+//Make a function calculate that takes three arguments. Assume the two arguments are a number ie num1, num2 and a function called operates (a callback).
+
+const calculate = (func,x,y) => {
+//Make it so that when calculate is invoked, the callback "operates" on the numbers and returns the value.
+    return func(x,y)
+}
+
+//Call calculate 4 times, each time using one of the operation functions you wrote
+console.log(calculate(multiply,4,5))
+console.log(calculate(divide,20,5))
+console.log(calculate(subtract,16,5))
+console.log(calculate(add,3,5))
+
+
+
+//Function definition placement
+//Clean up this code, so that it works and has function definition is in the correct place
+
+//bar();
+const bar = () => {
+    console.log('bar here');
+}
+bar()
+//foo();
+
+const foo = () => {
+    console.log('foo here');
+}
+foo()
+
+//Error reading
+//What is meant by the error(s) this produces?
+
+        // foo();
+
+        // const foo ()=>{
+        //     console.log('hi');
+        // }
+
+//It's trying to call the function before declaring it. foo() should be called under the function definition
