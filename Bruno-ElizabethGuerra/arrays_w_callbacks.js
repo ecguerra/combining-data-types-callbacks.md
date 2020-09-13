@@ -157,15 +157,25 @@ console.log(loudPan.reverse())
 // const panagram = ['The', 'quick','brown','fox', 'jumps', 'over', 'the', 'lazy', 'dog']
 const alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
 
+// const includesA = word => word.includes('a')
+const isPanagram = (word) => {
+  for (letter of alphabet) {
+    loudWord = word.toUpperCase()
+    console.log(`${letter}: ${loudWord.includes(letter)}`)
+  }
+}
+
+const allTogether = panagram.reduce(giantWord)
+
+isPanagram(allTogether) // I don't know if this was what we were supposed to do, but it works.
+
 
 
 // Working with data
 
-// filter for products with a price that is less than 10, using the array below:
-// sort alphabetically by product name
 const products = [
-    {
-      "name": "allen wrench",
+  {
+    "name": "allen wrench",
       "price": 2.99,
       "description": "handy tool"
     },
@@ -265,3 +275,18 @@ const products = [
       "description": "You'll get 'stuck' on it"
     },
   ]
+  // filter for products with a price that is less than 10, using the array above
+  const bargain = products.filter((item => item.price < 10))
+  console.log(bargain)
+
+  // sort alphabetically by product name
+  //const getName = (item) => item.name
+//  const productNames = products.forEach(item => console.log(item.name))
+
+// console.log(products.sort((a, b) => {
+//   if (a.name > b.name) return 1
+//   else return -1
+// }))
+
+//fancy short version
+console.log(products.sort((a, b) => (a.name > b.name) ? 1 : -1))
